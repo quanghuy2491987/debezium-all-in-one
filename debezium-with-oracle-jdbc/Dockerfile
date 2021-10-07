@@ -2,9 +2,8 @@ ARG DEBEZIUM_VERSION
 FROM debezium/connect:$DEBEZIUM_VERSION
 ENV KAFKA_CONNECT_JDBC_DIR=$KAFKA_CONNECT_PLUGINS_DIR/kafka-connect-jdbc
 ENV INSTANT_CLIENT_DIR=/instant_client/
-FROM ubuntu
 USER root
-RUN apt-get -y install libaio1 && apt-get clean all
+RUN yum -y install libaio1 && yum clean all
 
 USER kafka
 # Deploy Oracle client and drivers
