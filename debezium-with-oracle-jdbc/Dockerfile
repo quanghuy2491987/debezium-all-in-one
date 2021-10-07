@@ -4,7 +4,7 @@ ENV KAFKA_CONNECT_JDBC_DIR=$KAFKA_CONNECT_PLUGINS_DIR/kafka-connect-jdbc
 ENV INSTANT_CLIENT_DIR=/instant_client/
 FROM ubuntu
 USER root
-RUN apt -y install libaio && apt clean all
+RUN apt -y install libaio1 && apt clean all
 
 USER kafka
 # Deploy Oracle client and drivers
