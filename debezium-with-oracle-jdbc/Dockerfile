@@ -10,4 +10,4 @@ USER kafka
 
 COPY oracle_instantclient/* $INSTANT_CLIENT_DIR
 COPY oracle_instantclient/xstreams.jar /kafka/libs
-COPY oracle_instantclient/ojdbc8.jar /kafka/libs
+COPY oracle_instantclient/ojdbc6.jar /kafka/libs
